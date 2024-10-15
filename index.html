@@ -22,7 +22,7 @@
             <a href="#"class="company-logo">
                 <img src="./assets/asset 1.png" alt="company-logo">
             </a>
-            <div class="nav-links">
+            <div id="nav-links" class="nav-links">
               <ul class="flex">
                   <li><a href="#" class="hover-link">Product</a></li>
                   <li><a href="#" class="hover-link">Customer</a></li>
@@ -31,18 +31,17 @@
                   <li><a href="#" class="hover-link secondary-button">Sing in</a></li>
                   <li><a href="#" class="hover-link primary-button">Sing up</a></li>
               </ul>
-
-
             </div>
+             <a href="#" id="nav-toggle" class="nav-toggle hover-link">
+                <i class="fas fa-bars"></i>  
+            </a>
         </div>
-        
-
-
-
     </nav>
+
+
    <!-- header -->
     <header class="#">
-        <div class="container headre-section flex">
+        <div class="container header-section flex">
             <div class="header-left">
                 <h1>Design Confidently</h1>
                 <p>UsabilityHub is a remote user research platform that takes the guesswork out of design decisions by validating them with real users.</p>
@@ -145,7 +144,7 @@
 <!-- big features section 2-->
 
     <section class="big-features-section">
-        <div class="container flex big-feature-container">
+        <div id="second-big-feature" class="container flex big-feature-container" >
             <div class="feature-desc flex">
                 <h4>Optimisation for</h4>
                 <h3>Marketers</h3>
@@ -268,5 +267,16 @@
          <a href="#" class="hover-link"><img src="./assets/asset 31.png" alt="Youtube"></a>
      </div>
       </div>
+
+
+      <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton =addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+
+      </script>
 </body>
 </html>
